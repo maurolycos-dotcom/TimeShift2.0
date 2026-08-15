@@ -1344,7 +1344,7 @@ document.addEventListener("click", function() {
 function suche(eingabe) {
     const text = eingabe.trim().toLocaleLowerCase("de");
     if (text === "") return staedte.slice();
-    return staedte.filter(stadt => stadt.name.toLocaleLowerCase("de").includes(text));
+    return staedte.filter(stadt => stadt.name.toLocaleLowerCase("de").startsWith(text));
 }
 
 function ergebnisseAnzeigen(input, container, ziel) {
